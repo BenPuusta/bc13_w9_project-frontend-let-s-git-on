@@ -41,7 +41,7 @@ function App() {
 	async function sendName(name) {
 		let nameobject = { nickname: name };
 
-		const response = await fetch('http://localhost:3000/api/players', {
+		const response = await fetch('http://icebreaker-app-backend-lets-git-on.onrender.com/api/players', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',
@@ -70,7 +70,7 @@ function App() {
 			question: qID,
 			answer: answer,
 		};
-		const response = await fetch('http://localhost:3000/api/answers', {
+		const response = await fetch('http://icebreaker-app-backend-lets-git-on.onrender.com/api/answers', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',
