@@ -29,7 +29,7 @@ export default function ResultsPage({ userNickname, userNumber }) {
 		 */
 		async function getStats() {
 			const response = await fetch(
-				`http://icebreaker-app-backend-lets-git-on.onrender.com/api/players/${userNumber}`
+				`https://icebreaker-app-backend-lets-git-on.onrender.com/api/players/${userNumber}`
 			);
 			let unpackedJson = await response.json();
 			setUserState(unpackedJson.payload);
@@ -44,7 +44,7 @@ export default function ResultsPage({ userNickname, userNumber }) {
 	 * @param {num} value player ID
 	 */
 	async function sendP2(value) {
-		const response = await fetch(`http://icebreaker-app-backend-lets-git-on.onrender.com/api/players/${value}`);
+		const response = await fetch(`https://icebreaker-app-backend-lets-git-on.onrender.com/api/players/${value}`);
 		let unpackedJson = await response.json();
 		console.log(unpackedJson.payload);
 		setP2State(unpackedJson.payload);
